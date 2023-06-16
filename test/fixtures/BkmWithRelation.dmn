@@ -1,0 +1,44 @@
+<!-- adjusted from https://github.com/camunda/dmn-scala/blob/main/src/test/resources/bkm/BkmWithRelation.dmn -->
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="definitions_16rwaqm" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <businessKnowledgeModel id="BKM" name="Calculation">
+    <encapsulatedLogic>
+      <formalParameter name="a" />
+      <formalParameter name="b" />
+      <relation>
+		<column name="rate" />
+		<column name="fee" />
+		<row>
+	    	<literalExpression>
+	            <text>"A"</text>
+	        </literalExpression>
+	        <literalExpression>
+	            <text>a + b</text>
+	        </literalExpression>
+		</row>
+		<row>
+	    	<literalExpression>
+	            <text>"B"</text>
+	        </literalExpression>
+	        <literalExpression>
+	            <text>(a + b) * 1.5</text>
+	        </literalExpression>
+		</row>
+		<row>
+	    	<literalExpression>
+	            <text>"C"</text>
+	        </literalExpression>
+	        <literalExpression>
+	            <text>(a + b) * 1.75</text>
+	        </literalExpression>
+		</row>
+	  </relation>
+    </encapsulatedLogic>
+  </businessKnowledgeModel>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="BKM">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

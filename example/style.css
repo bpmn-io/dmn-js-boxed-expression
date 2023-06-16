@@ -1,0 +1,47 @@
+@import url('../node_modules/dmn-js/dist/assets/diagram-js.css');
+@import url('../node_modules/dmn-js/dist/assets/dmn-js-shared.css');
+@import url('../node_modules/dmn-js/dist/assets/dmn-font/css/dmn-embedded.css');
+@import url('../node_modules/dmn-js/dist/assets/dmn-js-drd.css');
+@import url('../node_modules/bootstrap/dist/css/bootstrap.css');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.test-container {
+  height: 500px;
+}
+
+.test-container:only-of-type {
+  height: 100%;
+}
+
+.dmn-js-boxed-expression {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.dmn-js-boxed-expression--content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.dmn-js-boxed-expression .table {
+  table-layout: fixed;
+}
+
+.dmn-js-boxed-expression--close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

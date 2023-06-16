@@ -6,22 +6,29 @@
   "scripts": {
     "dev": "npm test -- --auto-watch --no-single-run",
     "start": "cross-env SINGLE_START=true npm run dev",
-    "test": "karma start"
+    "test": "karma start",
+    "start:example": "npm run start -w=example",
+    "build:example": "npm run build -w=example"
   },
+  "workspaces": [
+    ".",
+    "example"
+  ],
   "files": [
     "lib"
   ],
   "author": "Maciej Barelkowski <maciej.barelkowski@camunda.com>",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.9.2",
     "chai": "^4.3.7",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "dmn-js": "^14.1.5",
-    "dmn-js-drd": "^14.1.5",
     "dmn-moddle": "^10.0.0",
     "eslint": "^8.28.0",
     "eslint-plugin-bpmn-io": "^0.16.0",
+    "file-drops": "^0.5.0",
     "ids": "^1.0.0",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "^3.2.0",
@@ -33,6 +40,8 @@
     "karma-webpack": "^5.0.0",
     "mocha": "^10.1.0",
     "mocha-test-container-support": "^0.2.0",
+    "parcel": "^2.9.2",
+    "process": "^0.11.10",
     "puppeteer": "^19.11.1",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.3",
@@ -42,6 +51,7 @@
     "@bpmn-io/dmn-variable-resolver": "bpmn-io/dmn-variable-resolver",
     "@bpmn-io/feel-editor": "^0.7.1",
     "bootstrap": "^5.3.0",
-    "diagram-js": "^12.2.0"
+    "diagram-js": "^12.2.0",
+    "dmn-js-drd": "^14.1.5"
   }
 }
